@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8" />
+    <title>Worklist - Flask Skeleton UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0c0c" />
+
+      <link rel="shortcut icon" href="/ui/images/app/favicon.ico" type="image/x-icon" />
+
+
+
+  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="main.css" /><!--<![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="/ui/stylesheets/main-ie8.css" /><![endif]-->
+  <script>
+  function myFunction() {
+    alert("Unlock work item?");
+  }
+  </script>
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+  <div class="app-cookie-banner js-cookie-banner">
+    <p class="app-cookie-banner__message">HM Land Registry uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies" class="govuk-link">Find out more about cookies</a></p>
+  </div>
+
+
+
+
+  <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+
+
+
+
+
+  <header class="govuk-header " role="banner" data-module="header">
+  <div class="govuk-header__container govuk-width-container">
+
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+
+        <span class="govuk-header__product-name">
+          HM Land Registry
+        </span>
+
+      </a>
+    </div>
+
+
+    <div class="govuk-header__content">
+
+
+    <a href="/" class="govuk-header__link govuk-header__link--service-name">
+      Verification
+    </a>
+
+
+
+    </div>
+
+  </div>
+  </header>
+
+
+
+
+      <div class="govuk-width-container">
+
+
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+  <strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+
+<span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Worklist</h1>
+
+        <ul class="govuk-tabs__list" role="tablist">
+              <li class="govuk-tabs__list-item" role="presentation">
+                <a class="govuk-tabs__tab" href="worklist.html" id="tab_past-day" role="tab" aria-controls="past-day" tabindex="0" aria-selected="true">
+                  Applications
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item" role="presentation">
+                <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="users-accounts.html" id="tab_past-week" role="tab" aria-controls="past-week" tabindex="-1" aria-selected="false">
+                  Users and accounts
+                </a>
+              </li>
+          </ul>
+<br /><br /><br />
+<h2 class="govuk-heading-m">User accounts</h2>
+  <details class="govuk-details search" role="group">
+    <summary class="govuk-details__summary" role="button" aria-controls="details-content-0b6467d2-7058-47be-a6c6-a98a3589caad" aria-expanded="false">
+      <span class="govuk-details__summary-text">
+        Search
+      </span>
+    </summary>
+    <div class="govuk-details__text" id="details-content-0b6467d2-7058-47be-a6c6-a98a3589caad" aria-hidden="true">
+        <div id="search-block">
+          <div class="govuk-form-group">
+            <table class="govuk-table" border="0">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" width="200" scope="row" style="text-align:right">First name: </th>
+                  <td class="govuk-table__cell"><input class="govuk-input" id="event-name" name="event-name" type="text" width="100px"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row" style="text-align:right">Last name: </th>
+                  <td class="govuk-table__cell"><input class="govuk-input" id="event-name" name="event-name" type="text" width="100px"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row" style="text-align:right">Company name: </th>
+                  <td class="govuk-table__cell"><input class="govuk-input" id="event-name" name="event-name" type="text" width="100px"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row" style="text-align:right">Email:</th>
+                  <td class="govuk-table__cell"><input class="govuk-input" id="event-name" name="event-name" type="text" width="100px"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="row" style="text-align:right"></th>
+                  <td class="govuk-table__cell"><button type="submit" class="govuk-button">
+                      Search
+                    </button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    </div>
+  </details>
+
+  <div id="results-block">
+    <span class="dgu-results__summary">
+        <span class="bold-small">213</span>
+        results found
+      </span>
+  </div>
+  <table class="govuk-table">
+
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+
+      <th class="govuk-table__header" scope="col">Date</th>
+
+      <th class="govuk-table__header" scope="col">Type</th>
+
+      <th class="govuk-table__header" scope="col">Name</th>
+
+      <th class="govuk-table__header" scope="col"></th>
+
+
+    </tr>
+  </thead>
+
+  <tbody class="govuk-table__body">
+
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell">05/03/2019</td>
+
+
+
+      <td class="govuk-table__cell">UK Personal</td>
+
+
+
+      <td class="govuk-table__cell">Mr Wibble Fibble</td>
+
+
+
+      <td class="govuk-table__cell"><a href="user_account_item.html">View account</a></td>
+
+    <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+
+      <td class="govuk-table__cell">05/03/2019</td>
+
+
+
+      <td class="govuk-table__cell">UK Personal</td>
+
+
+
+      <td class="govuk-table__cell">Mr Wibble Fibble</td>
+
+
+
+      <td class="govuk-table__cell"><a href="user_account_item.html">View account</a></td>
+
+      <td class="govuk-table__cell"></td>
+    </tr>    <tr class="govuk-table__row">
+
+          <td class="govuk-table__cell">05/03/2019</td>
+
+
+
+          <td class="govuk-table__cell">UK Personal</td>
+
+
+
+          <td class="govuk-table__cell">Mr Wibble Fibble</td>
+
+
+
+          <td class="govuk-table__cell"><a href="user_account_item.html">View account</a></td>
+
+
+        </tr>    <tr class="govuk-table__row">
+
+
+              <td class="govuk-table__cell">05/03/2019</td>
+
+
+
+              <td class="govuk-table__cell">UK Personal</td>
+
+
+
+              <td class="govuk-table__cell">Mr Wibble Fibble</td>
+
+
+
+              <td class="govuk-table__cell"><a href="user_account_item.html">View account</a></td>
+
+<td class="govuk-table__cell"></td>
+            </tr>    <tr class="govuk-table__row">
+
+
+                  <td class="govuk-table__cell">05/03/2019</td>
+
+
+
+                  <td class="govuk-table__cell">UK Personal</td>
+
+
+
+                  <td class="govuk-table__cell">Mr Wibble Fibble</td>
+
+
+
+                  <td class="govuk-table__cell"><a href="user_account_item.html">View account</a></td>
+<td class="govuk-table__cell"></td>
+
+                </tr>    <tr class="govuk-table__row">
+
+                      <td class="govuk-table__cell">05/03/2019</td>
+
+
+
+                      <td class="govuk-table__cell">UK Personal</td>
+
+
+
+                      <td class="govuk-table__cell">Mr Wibble Fibble</td>
+
+
+
+                      <td class="govuk-table__cell"><a href="user_account_item.html">View account</a></td>
+
+
+<td class="govuk-table__cell"></td>
+                    </tr>
+  </tbody>
+</table>
+
+
+      </div>
+    </div>
+  </main>
+</div>
+
+
+        </main>
+      </div>
+
+
+
+
+  <footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+      </div>
+    </div>
+  </div>
+  </footer>
+
+
+
+
+  <!--[if gt IE 8]><!-->
+  <script src="main.js"> </script>
+  <!--<![endif]-->
+
+  </body>
+</html>
+<script src="https://design-system.service.gov.uk/javascripts/vendor/iframeResizer.contentWindow.js"></script>
+<script src="https://design-system.service.gov.uk/javascripts/govuk-frontend-d998b60a5d585fe347e111112b0b9e97.js"></script>
+<script src="https://design-system.service.gov.uk/javascripts/example-aed4a541bd2d7a731e08f3e64294f90d.js"></script>

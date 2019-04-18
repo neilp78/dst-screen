@@ -1,0 +1,412 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="govuk-template ">
+  <head>
+    <meta charset="utf-8" />
+    <title>Worklist Item - Flask Skeleton UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0c0c" />
+
+      <link rel="shortcut icon" href="/ui/images/app/favicon.ico" type="image/x-icon" />
+
+
+
+  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="main.css" /><!--<![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="/ui/stylesheets/main-ie8.css" /><![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+  <script>
+    window.onload = function() {
+        if (window.jQuery) {
+            // jQuery is loaded
+            alert("Yeah!");
+        } else {
+            // jQuery is not loaded
+            alert("Doesn't Work");
+        }
+    }
+  </script>
+  </head>
+  <body class="govuk-template__body ">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+  <div class="app-cookie-banner js-cookie-banner">
+    <p class="app-cookie-banner__message">HM Land Registry uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies" class="govuk-link">Find out more about cookies</a></p>
+  </div>
+
+
+
+
+  <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+
+
+
+
+
+  <header class="govuk-header " role="banner" data-module="header">
+  <div class="govuk-header__container govuk-width-container">
+
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+
+        <span class="govuk-header__product-name">
+          HM Land Registry
+        </span>
+
+      </a>
+    </div>
+
+
+    <div class="govuk-header__content">
+
+
+    <a href="/" class="govuk-header__link govuk-header__link--service-name">
+      Verification
+    </a>
+
+
+
+    </div>
+
+  </div>
+  </header>
+
+
+
+
+      <div class="govuk-width-container">
+
+
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+  <strong class="govuk-tag govuk-phase-banner__content__tag ">
+  alpha
+</strong>
+
+<span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+
+  <a href="worklist.html" class="govuk-back-link">Back to worklist</a>
+
+
+
+        <div class="govuk-grid-row govuk-!-margin-top-3 govuk-!-margin-bottom-6">
+            <div class="govuk-grid-column-full">
+                <h1 class="govuk-heading-xl">Application information</h1>
+
+                <h2 class="govuk-heading-l">Details</h2>
+
+                <dl class="govuk-summary-list">
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Full Name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Mr Wibble Fibble
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        1 Wibble Street<br>Plymouth<br>UK<br>PL1 3RF<br>
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Telephone Number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        07527883344
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Email
+      </dt>
+      <dd class="govuk-summary-list__value">
+        wibble@fibble.com
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Contactable
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Yes
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Account Type
+      </dt>
+      <dd class="govuk-summary-list__value">
+        UK Personal
+      </dd>
+
+    </div>
+
+</dl>
+
+
+            </div>
+        </div>
+
+        <div class="govuk-grid-row govuk-!-margin-bottom-6">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Notes</h2>
+
+                <div class="lr-notepad govuk-!-margin-bottom-6">
+                    <ul class="govuk-list">
+
+                            <li class="lr-notepad__note">
+                                <span class="govuk-body">dsfsd</span><br>
+                                <span class="govuk-body-s lr-notepad__note__metadata">Added by testuser on 05/03/2019 09:46:43</span>
+                            </li>
+
+                    </ul>
+                </div>
+
+                <form action="/verification/note" method="POST">
+                    <input type="hidden" name="csrf_token" value="IjNiMDZjMDdmNzRkNGNmZjQxZjIzOGQ0M2NhOTM4NTVjMzIyZDhmMWMi.XH6C_g.rdnsm9OJbmjZoGLUP0eznwyoiPA"/>
+                    <input type="hidden" name="item_id" value="65">
+
+
+
+
+
+<div class="govuk-form-group">
+
+
+
+
+
+
+<label class="govuk-label" for="note_text">
+  Enter the text for your note
+</label>
+
+
+
+
+
+
+
+  <textarea class="govuk-textarea" id="note_text" name="note_text" rows="5" required="required"></textarea>
+</div>
+
+
+
+
+
+
+
+
+<a value="y" name="note_button" type="submit" class="govuk-button govuk-button lr-button--blue">
+  Add note
+</a>
+
+
+                </form>
+            </div>
+        </div>
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Actions</h2>
+            </div>
+
+            <div class="govuk-grid-column-two-thirds">
+                <p class="govuk-body">Approving an application will create an account and send the user an activation email.</p>
+
+                <form action="/verification/approve" method="POST">
+                    <input type="hidden" name="csrf_token" value="IjNiMDZjMDdmNzRkNGNmZjQxZjIzOGQ0M2NhOTM4NTVjMzIyZDhmMWMi.XH6C_g.rdnsm9OJbmjZoGLUP0eznwyoiPA"/>
+                    <input type="hidden" name="item_id" value="65">
+
+
+
+
+
+
+
+<a type="submit" class="govuk-button">
+  Approve
+</a>
+
+
+                </form>
+            </div>
+
+            <div class="govuk-grid-column-two-thirds">
+                <hr class="govuk-section-break--visible govuk-!-margin-bottom-6">
+
+                <p class="govuk-body">Declining an application will remove that users account and send them an email with the reason they were declined.</p>
+
+                <p class="govuk-body">When declining an application enter an appropriate reason.</p>
+
+                <form action="/verification/decline" method="POST">
+                    <input id="csrf_token" name="csrf_token" type="hidden" value="IjNiMDZjMDdmNzRkNGNmZjQxZjIzOGQ0M2NhOTM4NTVjMzIyZDhmMWMi.XH6C_g.rdnsm9OJbmjZoGLUP0eznwyoiPA">
+                    <input type="hidden" name="item_id" value="65">
+                    <meta id="decline_templates" data-decline-templates="[{&#34;decline_text&#34;: &#34;Following a check we have made with Companies House it appears that your company name/number could not be found on their records. If the company is registered overseas please, reapply ensuring the correct \u2018User Type\u2019 is selected when reapplying.&#34;, &#34;decline_reason&#34;: &#34;Company not found on Companies House&#34;}, {&#34;decline_text&#34;: &#34;Following a check we have made with Companies House it appears that your company name and number do not match their records. Please, therefore, reapply using the correct company name/number.&#34;, &#34;decline_reason&#34;: &#34;Company Registration Number does not match the registration number on the Companies House website&#34;}, {&#34;decline_text&#34;: &#34;Following a check, we cannot verify your connection with the Corporate Body stated.&#34;, &#34;decline_reason&#34;: &#34;Company switchboard has no knowledge of applicant&#34;}, {&#34;decline_text&#34;: &#34;Following a check we have made with Charity Commission, your charity could not be found on their records.  If the charity is registered in the UK, please reapply ensuring the charity number is quoted.&#34;, &#34;decline_reason&#34;: &#34;Charity cannot be found on the CC website&#34;}, {&#34;decline_text&#34;: &#34;Following a check we have made with the Charity Commission, it appears that your charity name and charity number do not match their records. Please, therefore, reapply using the correct charity name/number.&#34;, &#34;decline_reason&#34;: &#34;Charity Registration number\u200b does not match&#34;}]">
+
+                    <div class="js-only">
+
+
+
+
+<div class="govuk-form-group">
+
+
+
+
+
+
+<label class="govuk-label" for="decline_template">
+  Common decline reasons
+</label>
+
+
+
+
+
+
+
+  <select class="govuk-select" id="decline_template" name="decline_template">
+
+    <option value="template_0">Company not found on Companies House</option>
+
+    <option value="template_1">Company Registration Number does not match the registration number on the Companies House website</option>
+
+    <option value="template_2">Company switchboard has no knowledge of applicant</option>
+
+    <option value="template_3">Charity cannot be found on the CC website</option>
+
+    <option value="template_4">Charity Registration number​ does not match</option>
+
+  </select>
+</div>
+
+
+
+
+
+
+
+
+<a value="y" name="template_button" type="submit" class="govuk-button govuk-button lr-button--blue" id="template_button">
+  Add text
+</a>
+
+
+                    </div>
+
+
+
+
+
+<div class="govuk-form-group">
+
+
+
+
+
+
+<label class="govuk-label" for="decline_reason">
+  Decline reason text
+</label>
+
+
+
+
+
+
+
+  <textarea class="govuk-textarea" id="decline_reason" name="decline_reason" rows="8" required="required"></textarea>
+</div>
+
+
+
+
+
+
+
+
+<a value="y" name="decline_button" type="submit" class="govuk-button govuk-button lr-button--red">
+  Decline
+</a>
+
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+
+        </main>
+      </div>
+
+
+
+
+  <footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+      </div>
+    </div>
+  </div>
+  </footer>
+
+
+
+
+  <!--[if gt IE 8]><!-->
+  <script src="main.js"> </script>
+  <!--<![endif]-->
+
+  </body>
+</html>
