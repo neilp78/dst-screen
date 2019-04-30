@@ -19,13 +19,29 @@
 
   <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="main.css" /><!--<![endif]-->
   <!--[if IE 8]><link rel="stylesheet" type="text/css" href="/ui/stylesheets/main-ie8.css" /><![endif]-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-
-  <script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
     window.onload = function() {
         if (window.jQuery) {
-            // jQuery is loaded
-            alert("Yeah!");
+            $('.show-actions').hide();
+            $('#approve-radio').click(function() {
+             if($('#approve-radio').is(':checked')) {
+               $('.show-actions').hide();
+               $('.show-approve ').show();
+             }
+            });
+            $('#decline-radio').click(function() {
+             if($('#decline-radio').is(':checked')) {
+               $('.show-actions').hide();
+               $('.show-decline').show();
+             }
+            });
+            $('#cancel-radio').click(function() {
+             if($('#cancel-radio').is(':checked')) {
+               $('.show-actions').hide();
+               $('.show-cancel').show();
+             }
+            });
         } else {
             // jQuery is not loaded
             alert("Doesn't Work");
@@ -257,29 +273,61 @@
             </div>
 
             <div class="govuk-grid-column-two-thirds">
-                <p class="govuk-body">Approving an application will create an account and send the user an activation email.</p>
-
-                <form action="/verification/approve" method="POST">
+                      <form action="/verification/approve" method="POST">
                     <input type="hidden" name="csrf_token" value="IjNiMDZjMDdmNzRkNGNmZjQxZjIzOGQ0M2NhOTM4NTVjMzIyZDhmMWMi.XH6C_g.rdnsm9OJbmjZoGLUP0eznwyoiPA"/>
                     <input type="hidden" name="item_id" value="65">
 
 
 
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <h2>
+        Actions
+      </h2>
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="approve-radio" name="" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="-1">
+          Approve
+        </label>
+        <span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+          Approving an application will create an account and send the user an activation email.
+        </span>
+      </div>
+        <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="decline-radio" name="" type="radio" value="">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="-2">
+          Decline
+        </label><span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+          Declining an application will remove that users account and send them an email with the reason they were declined.</span>  </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="cancel-radio" name="" type="radio" value="">
+        <label class="govuk-label govuk-radios__label govuk-label--s" for="-3">
+          Cancel application
+        </label><span id="sign-in-1-item-hint" class="govuk-hint govuk-radios__hint">
+          Something.
+        </span>  </div>
+    </div>
+  </fieldset>
+</div>
+</form>
 
-
-
-
-<a type="submit" class="govuk-button">
-  Approve
-</a>
-
-
-                </form>
             </div>
-
             <div class="govuk-grid-column-two-thirds">
-                <hr class="govuk-section-break--visible govuk-!-margin-bottom-6">
 
+
+                <hr class="govuk-section-break--visible govuk-!-margin-bottom-6">
+              <div class="show-approve show-actions">
+                <h2 class="govuk-heading-m">Approve application</h2>
+                <a type="submit" class="govuk-button">
+                  Approve
+                </a>
+              </div>
+              <div class="show-decline show-actions">
+                <h2 class="govuk-heading-m">Decline application</h2>
                 <p class="govuk-body">Declining an application will remove that users account and send them an email with the reason they were declined.</p>
 
                 <p class="govuk-body">When declining an application enter an appropriate reason.</p>
@@ -378,7 +426,14 @@
 
                 </form>
             </div>
+            <div class="show-cancel show-actions">
+              <h2 class="govuk-heading-m">Cancel application</h2>
+              <a value="y" name="decline_button" type="submit" class="govuk-button govuk-button lr-button--red">
+                Cancel application
+              </a>
+            </div>
         </div>
+      </div>
 
     </main>
 </div>
