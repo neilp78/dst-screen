@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" class="govuk-template ">
   <head>
@@ -9,7 +16,12 @@
       <link rel="shortcut icon" href="/ui/images/app/favicon.ico" type="image/x-icon" />
 
 
-
+<style>
+.locked-to-me {
+  width: 320px;
+  padding: 10px;
+}
+  </style>
   <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="main.css" /><!--<![endif]-->
   <!--[if IE 8]><link rel="stylesheet" type="text/css" href="/ui/stylesheets/main-ie8.css" /><![endif]-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -33,6 +45,13 @@
              if($('#cancel-radio').is(':checked')) {
                $('.show-actions').hide();
                $('.show-cancel').show();
+             }
+            });
+            $('#to-me').click(function() {
+             if($('#to-me').is(':checked')) {
+               $('#my-name').text('Assigned to me').append('    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6f777b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="15" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>');
+               $('.locked-to-me').css('background','#bfc1c3');
+               $('.locked-to-me').css('color','#6f777b').css('width','230px');
              }
             });
         } else {
@@ -129,7 +148,15 @@
         <div class="govuk-grid-row govuk-!-margin-top-3 govuk-!-margin-bottom-6">
             <div class="govuk-grid-column-full">
                 <h1 class="govuk-heading-xl">Application information</h1>
-
+                <div class="govuk-checkboxes locked-to-me">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="to-me" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-1" id="my-name">
+                      Assign this application to me
+                    </label>
+                  </div>
+                </div>
+                <br />  <br />  <br />
                 <h2 class="govuk-heading-l">Details</h2>
 
                 <dl class="govuk-summary-list">
@@ -422,7 +449,7 @@
             <div class="show-cancel show-actions">
               <h2 class="govuk-heading-m">Cancel application</h2>
               <label class="govuk-label" for="decline_reason">
-                Reason application declined 
+                Reason application declined
               </label>
               <textarea class="govuk-textarea" id="decline_reason" name="decline_reason" rows="8" required="required"></textarea>
 
