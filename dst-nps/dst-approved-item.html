@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://openresty:8080/verification/worklist/1400?from=search -->
+<html lang="en" class="govuk-template "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Account - Verification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0c0c">
+<style>
+  .grey-inset {
+    background: #f8f8f8;
+    padding: 2%;
+    border-top: 5px solid #bfc1c3;
+    margin-top: 12%;
+  }	
+</style>
+      <link rel="shortcut icon" href="http://openresty:8080/ui/images/app/favicon.ico" type="image/x-icon">
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+      window.onload = function() {
+          if (window.jQuery) {
+              $('.show-actions').hide();
+              $('.show-close, .show-nps').hide();
+
+              $('#close-radio').click(function() {
+               if($('#close-radio').is(':checked')) {
+                 $('.show-close').show();
+                 $('.show-nps').hide();
+               }
+              });
+
+              $('#show-nps').click(function() {
+               if($('#show-nps').is(':checked')) {
+                 $('.show-close').hide();
+                 $('.show-nps').show();
+               }
+              });
+              $('#cancel-radio').click(function() {
+               if($('#cancel-radio').is(':checked')) {
+                 $('.show-actions').hide();
+                 $('.show-cancel').show();
+               }
+              });
+              $('#to-me').click(function() {
+               if($('#to-me').is(':checked')) {
+                 $('#my-name').text('Assigned to me').append('    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6f777b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="15" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>');
+                 $('.locked-to-me').css('background','#bfc1c3');
+                 $('.locked-to-me').css('color','#6f777b').css('width','230px');
+               }
+              });
+          } else {
+              // jQuery is not loaded
+              alert("Doesn't Work");
+          }
+      }
+    </script>
+  <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="./dst-approved-item_files/main.css"><!--<![endif]-->
+  <!--[if IE 8]><link rel="stylesheet" type="text/css" href="/ui/stylesheets/main-ie8.css" /><![endif]-->
+
+  </head>
+  <body class="govuk-template__body  js-enabled">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+  <div class="app-cookie-banner js-cookie-banner">
+    <p class="app-cookie-banner__message">HM Land Registry uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies" class="govuk-link">Find out more about cookies</a></p>
+  </div>
+
+
+
+
+  <a href="http://openresty:8080/verification/worklist/1400?from=search#main-content" class="govuk-skip-link">Skip to main content</a>
+
+
+
+
+
+
+  <header class="govuk-header " role="banner" data-module="header">
+  <div class="govuk-header__container govuk-width-container">
+
+    <div class="govuk-header__logo">
+      <a href="https://www.gov.uk/government/organisations/land-registry" class="govuk-header__link govuk-header__link--homepage">
+
+        <span class="govuk-header__product-name">
+          HM Land Registry
+        </span>
+
+      </a>
+    </div>
+
+
+    <div class="govuk-header__content">
+
+
+    <a href="http://openresty:8080/verification/worklist" class="govuk-header__link govuk-header__link--service-name">
+      Verification
+    </a>
+
+
+
+    </div>
+
+  </div>
+  </header>
+
+
+
+
+      <div class="govuk-width-container">
+
+
+  <div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+  <strong class="govuk-tag govuk-phase-banner__content__tag ">
+  beta
+</strong>
+
+<span class="govuk-phase-banner__text">
+      This is a new service – your feedback will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+    <nav class="app-navigation govuk-clearfix full-screen">
+        <ul>
+
+            <li class="app-navigation__item">
+
+                    <span class="govuk-body-s govuk-body govuk-!-margin-bottom-0">Logged in as: TestUser</span>
+
+            </li>
+
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+
+
+  <a href="http://openresty:8080/verification/worklist/search" class="govuk-back-link">Back to search results</a>
+
+
+
+
+
+
+
+
+        <div class="govuk-grid-row govuk-!-margin-top-3 govuk-!-margin-bottom-6">
+            <div class="govuk-grid-column-full">
+                <h1 class="govuk-heading-xl">Application information</h1>
+
+                <h2 class="govuk-heading-l">Details</h2>
+
+                <dl class="govuk-summary-list">
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Full Name
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Mr Rhys Barrett
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Status
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <span class="status-approved">Approved</span>
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Address
+      </dt>
+      <dd class="govuk-summary-list__value">
+        18, 52 Mason Way<br>Park Central<br>Birmingham<br>B15 2EE<br>
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Telephone Number
+      </dt>
+      <dd class="govuk-summary-list__value">
+        07508271766
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Email
+      </dt>
+      <dd class="govuk-summary-list__value">
+        rtbarrett27@gmail.com
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Contactable
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Yes
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Account Type
+      </dt>
+      <dd class="govuk-summary-list__value">
+        UK Personal
+      </dd>
+
+    </div>
+
+</dl>
+
+
+            </div>
+        </div>
+
+        <div class="govuk-grid-row govuk-!-margin-bottom-6">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Notes</h2>
+
+                <div class="lr-notepad govuk-!-margin-bottom-6">
+                    <ul class="govuk-list">
+
+                    </ul>
+                </div>
+
+                    <form action="http://openresty:8080/verification/worklist/note" method="POST">
+                        <input type="hidden" name="csrf_token" value="ImRkMTgyNjkyZmUzOTM4MzM1ZTkxODdlMjNiZGUzNWU1NmIxNDM3NjMi.XQNsxw._mEMhTadjfvXUx-OOJA1Aho-IPA">
+                        <input type="hidden" name="item_id" value="1400">
+
+
+
+
+
+<div class="govuk-form-group">
+
+
+
+
+
+
+<label class="govuk-label" for="note_text">
+  Enter the text for your note
+</label>
+
+
+
+
+
+
+
+  <textarea class="govuk-textarea" id="note_text" name="note_text" rows="5" required="required"></textarea>
+</div>
+
+
+
+
+
+
+
+<button value="y" name="note_button" type="submit" class="govuk-button lr-button--blue">
+  Add note
+</button>
+
+
+                    </form>
+
+            </div>
+        </div>
+
+
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Actions</h2>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="close-radio" name="changed-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                  Close customer account
+                </label> </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="show-nps" name="changed-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Allow access to National Polygon Service
+                </label> </div>
+            </div>
+          </fieldset>
+        </div>
+
+<div class="show-close grey-inset">
+<h2  class="govuk-heading-xl">Close customer account</h2>
+        <p class="govuk-caption-m">Closing will remove that users account. An email will need to be sent to the user to inform them that their account is now closed.</p>
+
+        <form action="http://openresty:8080/verification/worklist/close" method="POST">
+            <input type="hidden" name="csrf_token" value="ImRkMTgyNjkyZmUzOTM4MzM1ZTkxODdlMjNiZGUzNWU1NmIxNDM3NjMi.XQNsxw._mEMhTadjfvXUx-OOJA1Aho-IPA">
+            <input type="hidden" name="item_id" value="1400">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="govuk-form-group">
+
+
+  <fieldset class="govuk-fieldset">
+
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    Who requested to close this account?
+  </legend>
+
+
+
+
+
+  <div class="govuk-radios govuk-radios--inline">
+
+
+
+
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="close_requester-1" name="close_requester" type="radio" value="customer">
+
+
+
+
+
+
+<label class="govuk-label govuk-radios__label" for="close_requester-1">
+  Customer
+</label>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="close_requester-2" name="close_requester" type="radio" value="hmlr">
+
+
+
+
+
+
+<label class="govuk-label govuk-radios__label" for="close_requester-2">
+  HMLR
+</label>
+
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+  </fieldset>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="govuk-form-group">
+
+
+
+
+
+
+<label class="govuk-label" for="close_reason">
+  Explain the reason for closing this account
+</label>
+
+
+
+
+
+
+
+  <textarea class="govuk-textarea" id="close_reason" name="close_reason" rows="8" required="required"></textarea>
+</div>
+
+
+
+
+
+
+
+
+<button value="y" name="close_button" type="submit" class="govuk-button lr-button--red">
+  Close account
+</button>
+
+
+        </form>
+
+    </div>
+    <div class="show-nps grey-inset">
+      <h2  class="govuk-heading-l">Provide access to National Polygon Service</h2>
+      <a href="#" class="govuk-button">Provide access to National Polygon Service</a>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+</div>
+
+
+        </main>
+      </div>
+
+
+
+
+  <footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+      </div>
+    </div>
+  </div>
+  </footer>
+
+
+
+
+  <!--[if gt IE 8]><!-->
+  <script src="./dst-approved-item_files/main.js"> </script>
+  <!--<![endif]-->
+
+
+</body></html>
