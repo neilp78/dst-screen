@@ -11,7 +11,7 @@
     padding: 2%;
     border-top: 5px solid #bfc1c3;
     margin-top: 12%;
-  }	
+  }
 </style>
       <link rel="shortcut icon" href="http://openresty:8080/ui/images/app/favicon.ico" type="image/x-icon">
 
@@ -322,7 +322,7 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="show-nps" name="changed-name" type="radio" value="no">
                 <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                  Allow access to National Polygon Service
+                  Allow access to paid for datasets
                 </label> </div>
             </div>
           </fieldset>
@@ -402,14 +402,7 @@
   HMLR
 </label>
 
-
-
-
-
     </div>
-
-
-
   </div>
 
   </fieldset>
@@ -460,8 +453,32 @@
 
     </div>
     <div class="show-nps grey-inset">
-      <h2  class="govuk-heading-l">Provide access to National Polygon Service</h2>
-      <a href="#" class="govuk-button">Provide access to National Polygon Service</a>
+      <h2 class="govuk-heading-l">Provide access to paid for datasets</h2>
+      <h3 class="govuk-heading-m">Notes</h3>
+      <textarea class="govuk-textarea" id="close_reason" name="close_reason" rows="8" required="required"></textarea>
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses" checked="true">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+          OCOD
+        </label> </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines" checked="true">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          CCOD
+        </label> </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Natopnal Polygon Service
+        </label> </div>
+    </div>
+  </fieldset>
+</div>
+
+      <a href="#" class="govuk-button">Update account</a>
     </div>
 
   </div>
